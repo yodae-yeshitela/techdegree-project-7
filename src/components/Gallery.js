@@ -3,8 +3,9 @@ import Photo from './Photo'
 const Gallery =(props)=>{
     const {isLoading, title, photos} = props;
     if(!isLoading && photos.length === 0)
-        return (<div>Sorry, no results for search: <strong>"{props.searchTerm}"</strong>, Try again</div>);
-    else return(
+        return <div>Sorry, no results for search: <strong>"{props.searchTerm}"</strong>, Please Try again</div>;
+    else 
+        return(
             isLoading?
                 <React.Fragment>
                     <div className='loading'></div>

@@ -67,6 +67,7 @@ class App extends Component {
             render={(props) => 
             <Gallery
                 {...props}
+                searchTerm = {props.match.params.searchTerm} 
                 searchPhotos = {this.searchPhotos} 
                 isLoading = {this.state.isLoading} 
                 title={`Search results for: ${props.match.params.searchTerm}`} 
